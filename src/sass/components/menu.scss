@@ -1,0 +1,194 @@
+//覆盖原来的菜单样式 start
+$menu_width:200px;
+$menu_logo_height: $headerHeight;
+$active_color:#fff;
+$menu_bg:#2774af;
+$men_logo_bg:#01426a;
+$menu_text_color: #efefef;
+$sub_menu_bg:#005e98;
+$open_menu_item_bg: #004e7d;
+.menu_warp{
+  width: $menu_width;
+  float: left;
+  box-shadow: 1px 1px 6px $menu_bg;
+  background-color: $menu_bg;
+  //padding: 10px 0;
+  position: relative;
+  transition: all .3s;
+  overflow-x: hidden;
+  &.menu_collapse{
+    width: 64px;
+  }
+  >.menu_top{
+    width: $menu_width;
+    //padding: 0 20px;
+  }
+  .no_collapse{
+    color: $menu_text_color;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 20px;
+    i{
+      cursor: pointer;
+      display: block;
+      margin-bottom: 30px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    img{
+      width: 32px;
+      max-width: 32px;
+      margin-left: -5px;
+    }
+  }
+  //绝对定位菜单组件
+  >.el-menu{
+    border: none;
+    background-color: $menu_bg;
+    color: $menu_text_color;
+    position: absolute;
+    top:115px;
+    bottom: 65px;
+    z-index: 1;
+    overflow-x: hidden ;
+    overflow-y: auto;
+    //width: 100%;
+    &:not(.el-menu--collapse) {
+      width: 100%;
+    }
+    &.el-menu--collapse{
+      //width: 64px;
+    }
+    .el-menu-item{
+      color: $menu_text_color;
+      background-color: $menu_bg;
+      transition: all .3s;
+      outline: none;
+      overflow: hidden;
+      &:hover{
+        text-shadow: 0 0 15px #fff;
+        transform: scale(1.08,1.08);
+      }
+      &.is-active{
+        background-color: $open_menu_item_bg;
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 7px;
+          left: 0;
+          border-radius: 0 3px 3px 0;
+          background-color: $global-primary;
+          box-shadow: 0 0 12px 1px $global-primary;
+          animation: anim-text-shadow 2s infinite;
+        }
+      }
+      i{
+        color: $menu_text_color;
+      }
+    }
+    .el-submenu__title{
+      color: $menu_text_color;
+      background-color: $menu_bg;
+      i{
+        //width: 20px;
+        text-align: center;
+        color: $menu_text_color;
+      }
+    }
+    .el-submenu__title:hover{
+      background-color: $sub_menu_bg;
+    }
+    //展开子菜单
+    .is-opened{
+      background-color: $sub_menu_bg;
+      .el-submenu__title{
+        background-color: $sub_menu_bg;
+      }
+      .el-menu-item{
+        &.is-active{
+          background-color: $open_menu_item_bg;
+        }
+        background-color: $sub_menu_bg;
+      }
+    }
+    //选中菜单
+    .is-active{
+      color: $active_color;
+    }
+
+  }
+  .setting{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 0 20px;
+    cursor: pointer;
+    color: $menu_text_color;
+    z-index: 2;
+    width: $menu_width;
+  }
+  .menu_logo{
+    line-height: $menu_logo_height;
+    color: #fff;
+    padding: 0 10px;
+    background-color: $men_logo_bg;
+    span{
+      float: left;
+      //margin-left: 10px;
+      font-size: 18px;
+    }
+    i{
+      line-height: 18px;
+      float: right;
+      //border: 1px solid;
+      width: 20px;
+      text-align: center;
+      border-radius: 50%;
+      //font-size: 14px;
+      margin-top: 17px;
+      cursor: pointer;
+      &:hover{
+        //background-color: #fff;
+        //color: #222C3C;
+      }
+    }
+  }
+  .user_info{
+    color: $menu_text_color;
+    padding: 10px;
+    display: flex;
+    height: 60px;
+    line-height: 40px;
+    background: url("../../../assets/img/menu_bg.jpeg") no-repeat;
+    background-size: cover;
+    p{
+      font-size: 18px;
+      color: #fff;
+    }
+    img{
+      width: 40px;
+      margin-right: 5px;
+      //float: left;
+    }
+  }
+}
+img.user-logo{
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+@keyframes anim-text-shadow {
+  0% {
+    box-shadow: 0 0 25px 3px $global-primary;
+  }
+  50% {
+    box-shadow: 0 0 5px 1px $global-primary;
+  }
+  100% {
+    box-shadow: 0 0 25px 3px $global-primary;
+  }
+}

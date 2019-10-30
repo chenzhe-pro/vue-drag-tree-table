@@ -1,0 +1,32 @@
+.sidebar{
+  padding: 12px;
+  width: 381px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #eee;
+  overflow: auto;
+  .el-radio{
+    margin-right: 12px;
+    margin-bottom: 3px;
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+.sidebar-warp{
+  &+.sidebar-warp{
+    border-top: 1px solid #e7e7e7;
+  }
+}
+.sidebar-title{
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.sidebar-content{
+
+}

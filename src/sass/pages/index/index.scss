@@ -1,0 +1,227 @@
+@import "../../variable/variable";
+@import "../../core/utility";
+@import "../../core/reset";
+@import "../../mixin/index";
+@import "./element-variables";
+@import "../../components/Layout";
+@import "../../components/sidebar";
+
+
+html,body{
+  font-size: 13px;
+  background-color: #f0f2f5;
+  height: 100%;
+}
+#app,.layout,.el-container {
+  height: 100%;
+}
+.main-top{
+  padding-bottom: 10px;
+  border-bottom: 1px solid $global-border;
+  //.main-top-title{
+  //  font-weight: bold;
+  //}
+  .main-top-desc{
+    margin-left: 10px;
+    font-size: 13px;
+    color: #999;
+  }
+}
+img{
+  display: block;
+}
+.dialog_inner{
+  position: relative;
+  .dialog_inner_title{
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    top: -67px;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .dialog_inner_subTitle{
+    text-align: center;
+  }
+  .dialog_inner_content{
+    margin: 24px auto 40px;
+    position: relative;
+  }
+  .dialog_inner_footer{
+    text-align: center;
+  }
+}
+.el-dialog__headerbtn{
+  font-size: 24px;
+  transition: all .3s;
+  transform-origin: 50% 50%;
+  &:hover{
+    transform: scale(1.15,1.15) rotate(90deg);
+  }
+}
+.el-tree-node.is-current{
+  >.el-tree-node__content{
+    .el-tree-node__label.custom-tree-node{
+      color: $--color-primary;
+      font-weight: bold;
+      i.is-checked-tree-node{
+        display: inline;
+      }
+    }
+  }
+}
+.el-tree>.el-tree-node{
+  min-width:100%;
+  display: inline-block !important;
+  i.is-checked-tree-node{
+    display: none;
+  }
+}
+.el-tree-node__expand-icon{
+  font-size: 16px;
+}
+.custom-tree-node{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding-right: 10px;
+}
+.opt-buttons{
+  //display: none;
+  font-size: 12px;
+}
+.el-table{
+  border: 1px solid #EBEEF5;
+  border-bottom: none;
+}
+.el-table th{
+  background-color: #fafafa;
+}
+.el-table td, .el-table th{
+  a{
+    color: $global-primary;
+    text-decoration: underline;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+  .el-button--text.el-button--mini{
+    padding: 4px 0;
+    i{
+      font-size: 13px;
+    }
+  }
+}
+.el-table--small th, .el-table--small td{
+  padding: 6px 0;
+}
+.el-table__expanded-cell[class*=cell]{
+  padding: 10px 50px;
+  background-color: rgb(249, 249, 249);
+}
+.el-calendar-table .el-calendar-day{
+  height: auto;
+  //padding: 10px 8px;
+  .dateCell{
+    &.NN{
+      color: #999;
+    }
+    &.WORK{
+      color: $global-primary;
+    }
+    &.REST{
+      color: $global-success;
+    }
+  }
+}
+.el-dropdown{
+  cursor: pointer;
+}
+.el-loading-spinner i{
+  font-size: 20px;
+}
+.el-form--inline .el-form-item{
+  margin-right: 25px;
+}
+.el-form-item--mini .el-form-item__label{
+  font-size: 13px;
+  line-height: 29px;
+}
+.el-form--label-top .el-form-item__label{
+  padding: 0;
+}
+//.el-form{
+//  .el-form-item{
+//    &:last-child{
+//      margin-bottom: 0;
+//    }
+//  }
+//}
+
+.el-menu-item{
+  height: 48px;
+  line-height: 48px;
+  font-size: $font-size-base;
+}
+.el-submenu__title{
+  height: 48px;
+  line-height: 48px;
+  font-size: $font-size-base;
+}
+.no_data_tip{
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+  font-size: 13px;
+}
+.card-list{
+  .card-item{
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    overflow: hidden;
+    color: #303133;
+    transition: .2s;
+    margin-top: 10px;
+    &:hover{
+      box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    }
+
+  }
+}
+.search-area{
+  display: flex;
+  justify-content: space-between;
+  .el-button{
+
+  }
+}
+.upload-btn{
+  padding: 5px 6px;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  cursor: pointer;
+  border-radius: 4px;
+  &:hover{
+    background-color: #e8e8e8;
+  }
+}
+.statistics{
+  display: flex;
+  width: 80%;
+  margin: 0 auto 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  >div{
+    flex: 1;
+    color: #fff;
+    height: 40px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+}

@@ -69,7 +69,7 @@ document.body.ondrop = function(event) {
   event.stopPropagation();
 };
 export default {
-  name: 'dragTreeTable',
+  name: 'DragTreeTable',
   components: {
     row,
     column

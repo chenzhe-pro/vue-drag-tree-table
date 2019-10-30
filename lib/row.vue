@@ -224,6 +224,22 @@ export default {
 .tree-row:hover{
      background: #ecf5ff
  }
+.tree-row.danger{
+  background-color: #F56C6C;
+  color: #fff;
+}
+.tree-row.success{
+  background-color: #67C23A;
+  color: #fff;
+}
+.tree-row.warning{
+  background-color: #E6A23C;
+  color: #fff;
+}
+.tree-row.info{
+  background-color: #909399;
+  color: #fff;
+}
 .tree-row .align-left{
     text-align: left;
 }

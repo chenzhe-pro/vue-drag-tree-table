@@ -1,0 +1,37 @@
+@import "../../variable/variable";
+@import "../../core/utility";
+@import "../../core/reset";
+@import "../../mixin/index";
+@import "../../components/foot";
+@import "./views/login/login";
+//@import "./views/login/login_segmenter";
+//@import "./views/login/input_set1.scss";
+@import "./element-variables";
+
+
+html,body{
+  font-size: 14px;
+  background-color: #fff;
+  //line-height: 16px;
+  height: 100%;
+  min-height: 400px;
+}
+#app{
+  height: 100%;
+}
+img{
+  display: block;
+}
+.no_data{
+  width: 67%;
+  margin: 15% auto;
+}
+.no_data_img{
+
+}
+.no_data_tip{
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+  font-size: 13px;
+}
